@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Scheduler</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width,height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js'></script>
+    <script src="/javascripts/client.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+<body onload="createSchedule()">
+  <h1>Schedule</h1>
+  <hr>
+
+
+  <div id="container">
+  <div id="links">
+    <form action="/">
+      <input class="btn" type="submit" value="Home">
+    </form><br>
+    <form action="/delete">
+      <input class="btn" type="submit" value="Delete A Student">
+    </form><br>
+    <form action="/schedule">
+      <input class="btn" type="submit" value="Show Schedule">
+    </form><br>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <label id="labYoung" for="youngSchedule">Grades 1, 2, 3</label><br>
+  <table id="youngSchedule" class="coolTable"></table> <br>
+  <label id = "labOld" for="oldSchedule">Grades 4, 5</label><br>
+  <table id="oldSchedule" class="coolTable"></table> <br>
+  <label id = "labTeach" for="teachSchedule">Teacher's List</label><br>
+  <table id="teachSchedule" class="coolTable"></table> <br>
+
+  <label id="logLab" for="output">Log: </label><br>
+  <textarea id = 'output' rows="20" cols="90" readonly></textarea><br>
+  
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Scheduler</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width,height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js'></script>
+    <script src="/javascripts/client.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+  <h1>Survey Scheduler</h1>
+  <hr>
+
+
+<div id="container">
+  
+
+  <div id="links">
+    <form action="/">
+      <input class="btn" type="submit" value="Home">
+    </form><br>
+    <form action="/delete">
+      <input class="btn" type="submit" value="Delete A Student">
+    </form><br>
+    <form action="/schedule">
+      <input class="btn" type="submit" value="Show Schedule">
+    </form><br>
+  </div>
+
+</div>
+<div id="inputLog"> </div>
+  <form id="inputs" action="/students" method="post" name="myFormAdd" onsubmit="return validateAdd()">
+<div class="formrow requiredRow">
+  <label for="FirstName">First Name</label>
+  <input id="FirstName" name="fname" type="text" class="required" title="First Name. This is a required field">
+</div>
+<div class="formrow requiredRow">
+  <label for="LastName">Last Name</label>
+  <input id="LastName" name="lname" type="text" class="required" title="Last Name. This is a required field">
+</div>
+<div class="formrow requiredRow">
+  <fieldset>
+    <legend>Grade</legend>
+    <span><input value="1w" id="Grade_11" name="grade" type="radio" class="required" title="1w. This is a required field"> <label for="Grade_11">1w</label>
+    <input value="1s" id="Grade_12" name="grade" type="radio" class="required" title="1s. This is a required field"> <label for="Grade_12">1s</label></span>
+    <span><input value="2h" id="Grade_13" name="grade" type="radio" class="required" title="2h. This is a required field"> <label for="Grade_13">2h</label>
+    <input value="2r" id="Grade_14" name="grade" type="radio" class="required" title="2r. This is a required field"> <label for="Grade_14">2r</label></span>
+    <span><input value="3c" id="Grade_15" name="grade" type="radio" class="required" title="3c. This is a required field"> <label for="Grade_15">3c</label>
+    <input value="3m" id="Grade_16" name="grade" type="radio" class="required" title="3m. This is a required field"> <label for="Grade_16">3m</label></span>
+    <span><input value="4m" id="Grade_17" name="grade" type="radio" class="required" title="4m. This is a required field"> <label for="Grade_17">4m</label>
+    <input value="4c" id="Grade_18" name="grade" type="radio" class="required" title="4c. This is a required field"> <label for="Grade_18">4c</label></span>
+    <span><input value="5c" id="Grade_19" name="grade" type="radio" class="required" title="5c. This is a required field"> <label for="Grade_19">5c</label>
+    <input value="5g" id="Grade_20" name="grade" type="radio" class="required" title="5g. This is a required field"> <label for="Grade_20">5g</label></span>
+  </fieldset>
+</div>
+<div class="formrow">
+  <input id="FreePlay" name="choices" value="free" type="checkbox">
+  <span><label for="FreePlay">Free Play</label></span>
+</div>
+<div class="formrow">
+  <input id="OutsideRecess" name="choices" value="outdoor" type="checkbox">
+  <span><label for="OutsideRecess">Outside Recess</label></span>
+</div>
+<div class="formrow">
+  <input id="TalentShow" name="choices" value="talent" type="checkbox">
+  <span><label for="TalentShow">Talent Show</label></span>
+</div>
+<div class="formrow">
+  <input id="GroupGames" name="choices" value="group" type="checkbox">
+  <span><label for="GroupGames">Group Games</label></span>
+</div>
+<div class="formrow">
+  <input id="Crafts" name="choices" value="crafts" type="checkbox">
+  <span><label for="Crafts">Crafts</label></span>
+</div>
+<div class="formrow">
+  <input id="HallwayActivities" name="choices" value="hallway" type="checkbox">
+  <span><label for="HallwayActivities">Hallway Activities</label></span>
+</div>
+<div class="formrow">
+  <input id="KidsTeachingKids" name="choices" value="kidTeach" type="checkbox">
+  <span><label for="KidsTeachingKids">Kids Teaching Kids</label></span>
+</div>
+<div class="formrow">
+  <label for="KidsTeachingKidsTopic">Kids Teaching Kids Topic</label>
+  <input id="KidsTeachingKidsTopic" name="kidTeachText" value="" type="text">
+</div>
+<div class="row">
+<input type="submit" value="Submit">
+</div>
+</form>
+
+
+  </body>
+</html>

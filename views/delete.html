@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey Scheduler</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width,height=device-height, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+    <script src="/javascripts/client.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body onload="getStudents()">
+  <h1>Delete A Student</h1>
+  <hr>
+
+
+<div id="container">
+  
+
+  <div id="links">
+  <div id="links">
+    <form action="/">
+      <input class="btn" type="submit" value="Home">
+    </form><br>
+    <form action="/delete">
+      <input class="btn" type="submit" value="Delete A Student">
+    </form><br>
+    <form action="/schedule">
+      <input class="btn" type="submit" value="Show Schedule">
+    </form><br>
+  </div>
+  </div>
+  
+<form id="deleteForm" action="/studentsd" method="post" name="myFormDelete" onsubmit="return validateDelete()">
+   *First name:
+   <input class= "finput" type="text" name="fname" placeholder="First" />
+   <br>
+   *Last name:
+   <input class = "linput" type="text" name="lname" placeholder="Last" /><br>
+   <button class= "submit" type="submit">Submit</button>
+</form>
+<br>
+<div id= "deleteLog"></div>
+<br>
+<div id= "totalStudents"></div>
+<br>
+
+<label id = "studentLabel" for="studentTable">Students in Database</label><br>
+<table id='studentTable' class="coolTable"></table>
+
+</div>
+
+
+  </body>
+</html>
